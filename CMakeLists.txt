@@ -13,7 +13,7 @@ endif()
 
 message(STATUS "Using serial port ${SERIAL_PORT} with baud rate ${BAUD_RATE}")
 
-add_custom_target(binary
+add_custom_target(objcopy
     COMMAND ${CMAKE_OBJCOPY} ${CMAKE_OBJCOPY_FLAGS} $<TARGET_FILE:Main> bin.hex
     BYPRODUCTS bin.hex
     DEPENDS Main)

@@ -1,6 +1,14 @@
 # AVR CMake Starter
 Simple template project for using CMake for building and flashing to an Arduino Nano.
 
+## Preset
+To configure, build and flash, run
+```
+cmake --workflow --preset configure-build-flash
+```
+To change serial port and baud rate, change `SERIAL_PORT` and `BAUD_RATE`
+in `CMakePresets.json`.
+
 ## Configuring
 Run
 ```

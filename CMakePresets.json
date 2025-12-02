@@ -1,0 +1,48 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "ninja",
+            "displayName": "Ninja",
+            "generator": "Ninja",
+            "binaryDir": "build",
+            "toolchainFile": "cmake/toolchains/ArduinoNano.cmake",
+            "cacheVariables": {
+                "SERIAL_PORT": "/dev/ttyUSB0",
+                "BAUD_RATE": "115200"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "build",
+            "configurePreset": "ninja",
+            "targets": "all"
+        },
+        {
+            "name": "objcopy",
+            "configurePreset": "ninja",
+            "targets": "objcopy"
+        },
+        {
+            "name": "flash",
+            "configurePreset": "ninja",
+            "targets": "flash"
+        }
+    ],
+    "workflowPresets": [
+        {
+            "name": "configure-build-flash",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "ninja"
+                },
+                {
+                    "type": "build",
+                    "name": "flash"
+                }
+            ]
+        }
+    ]
+}
