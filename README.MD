@@ -1,0 +1,23 @@
+# AVR CMake Example
+Simple example on using CMake for building and flashing to an Arduino Nano.
+
+## Configuring
+Run
+```
+cmake -B build --toolchain cmake/toolchains/ArduinoNano.cmake -G Ninja
+```
+to configure. To specify a port and baud rate for flashing:
+```
+cmake -B build --toolchain cmake/toolchains/ArduinoNano.cmake -G Ninja -DSERIAL_PORT=/dev/ttyUSB0 -DBAUD_RATE=115200
+```
+
+## Building
+```
+cmake --build build
+```
+
+## Flashing
+Also builds if changes are detected.
+```
+cmake --build build --target flash
+```
