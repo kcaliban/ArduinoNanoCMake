@@ -1,5 +1,5 @@
-# AVR CMake Example
-Simple example on using CMake for building and flashing to an Arduino Nano.
+# AVR CMake Starter
+Simple template project for using CMake for building and flashing to an Arduino Nano.
 
 ## Configuring
 Run

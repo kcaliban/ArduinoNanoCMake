@@ -1,2 +1,2 @@
-project(BlinkExe)
-add_executable(BlinkExe blink.cpp)
+project(Main)
+add_executable(Main main.cpp)

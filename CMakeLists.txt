@@ -14,9 +14,9 @@ endif()
 message(STATUS "Using serial port ${SERIAL_PORT} with baud rate ${BAUD_RATE}")
 
 add_custom_target(binary
-    COMMAND ${CMAKE_OBJCOPY} ${CMAKE_OBJCOPY_FLAGS} $<TARGET_FILE:BlinkExe> bin.hex
+    COMMAND ${CMAKE_OBJCOPY} ${CMAKE_OBJCOPY_FLAGS} $<TARGET_FILE:Main> bin.hex
     BYPRODUCTS bin.hex
-    DEPENDS BlinkExe)
+    DEPENDS Main)
 
 add_custom_target(flash
     COMMAND ${CMAKE_FLASHTOOL} ${CMAKE_FLASHTOOL_FLAGS} -P ${SERIAL_PORT} -b ${BAUD_RATE} -U flash:w:bin.hex
