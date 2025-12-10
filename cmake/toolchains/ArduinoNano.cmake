@@ -10,8 +10,8 @@ set(CMAKE_CXX_COMPILER avr-g++)
 
 # Set MCU to Atmega328p found on Arduino Nano, enable warnings,
 # optimize for size
-set(CMAKE_C_FLAGS_INIT "-mmcu=atmega328p -Wall -Os -fno-rtti -fno-exceptions -ffreestanding -nostdlib -fno-use-cxa-atexit -fno-threadsafe-statics")
-set(CMAKE_CXX_FLAGS_INIT "-mmcu=atmega328p -Wall -Os -fno-rtti -fno-exceptions -ffreestanding -nostdlib -fno-use-cxa-atexit -fno-threadsafe-statics")
+set(CMAKE_C_FLAGS_INIT "-mmcu=atmega328p -Wall -Os -fno-rtti -fno-exceptions -fno-use-cxa-atexit -fno-threadsafe-statics")
+set(CMAKE_CXX_FLAGS_INIT "-mmcu=atmega328p -Wall -Os -fno-rtti -fno-exceptions -fno-use-cxa-atexit -fno-threadsafe-statics")
 set(CMAKE_EXE_LINKER_FLAGS_INIT "-mmcu=atmega328p")
 
 # Tool and flags for converting ELF to Intel HEX
